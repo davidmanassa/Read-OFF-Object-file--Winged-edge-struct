@@ -1,0 +1,45 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "g++.exe build active file",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                // "-std=c++11",
+                // "-static",
+                // "-static-libgcc",
+                // "-static-libstdc++",
+                
+                // "${fileDirname}\\main.cpp",
+                // "-g",
+                "main.cpp",
+                "file_off.cpp",
+                "${fileDirname}\\common\\shader.cpp",
+                // "-IC:\\OpenGL\\glm",
+                "-IC:\\OpenGL\\GLEW\\include",
+                "-IC:\\OpenGL\\GLFW64\\include",
+                "-IC:\\OpenGL\\glm",
+                "-LC:\\OpenGL\\GLEW\\lib\\Release\\x64",
+                "-LC:\\OpenGL\\GLFW64\\lib-mingw-w64",
+                "-lglew32s",
+                "-lopengl32",
+                "-lglfw3",
+                "-lglu32",
+                "-lgdi32",
+                "-mwindows",
+                "-DGLEW_STATIC",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "compiler: C:\\MinGW\\bin\\g++.exe"
+        }
+    ]
+}
